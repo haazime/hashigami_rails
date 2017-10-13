@@ -1,0 +1,13 @@
+.ie-Section > .ie-Section_Show {
+  display: block;
+}
+.ie-Section > .ie-Section_Edit {
+  display: none;
+}
+
+.ie-Section-open > .ie-Section_Show {
+  display: none;
+}
+.ie-Section-open > .ie-Section_Edit {
+  display: block;
+}
