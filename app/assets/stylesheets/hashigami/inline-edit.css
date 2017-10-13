@@ -1,13 +1,13 @@
-.ie-Section > .ie-Section_Show {
+.hashigami-InlineEdit > .hashigami-InlineEdit_Prime {
   display: block;
 }
-.ie-Section > .ie-Section_Edit {
+.hashigami-InlineEdit > .hashigami-InlineEdit_Option {
   display: none;
 }
 
-.ie-Section-open > .ie-Section_Show {
+.hashigami-InlineEdit-open > .hashigami-InlineEdit_Prime {
   display: none;
 }
-.ie-Section-open > .ie-Section_Edit {
+.hashigami-InlineEdit-open > .hashigami-InlineEdit_Option {
   display: block;
 }

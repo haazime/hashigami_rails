@@ -1,12 +1,12 @@
 module Hashigami
   module InlineEditHelper
     module Naming
-      DATA_BEHAVIOR_VALUE = 'toggle-inline-edit'.freeze
+      DATA_BEHAVIOR_VALUE = 'hashigami-inline-edit'.freeze
 
       CSS_CLASSES = {
-        root: 'ie-Section'.freeze,
-        primary: 'ie-Section_Show'.freeze,
-        form: 'ie-Section_Edit'.freeze,
+        root: 'hashigami-InlineEdit'.freeze,
+        primary: 'hashigami-InlineEdit_Prime'.freeze,
+        form: 'hashigami-InlineEdit_Option'.freeze,
       }.freeze
 
       def data_behavior_value
