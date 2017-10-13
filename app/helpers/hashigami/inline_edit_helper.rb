@@ -28,11 +28,11 @@ module Hashigami
         @container_dom_id = container_dom_id
       end
 
-      def primary(html_options, &block)
+      def primary(html_options = {}, &block)
         section(:primary, html_options, &block)
       end
 
-      def form(html_options, &block)
+      def form(html_options = {}, &block)
         section(:form, &block)
       end
 
