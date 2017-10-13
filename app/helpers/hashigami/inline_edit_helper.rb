@@ -28,17 +28,18 @@ module Hashigami
         @container_dom_id = container_dom_id
       end
 
-      def primary(&block)
-        section(:primary, &block)
+      def primary(html_options, &block)
+        section(:primary, html_options, &block)
       end
 
-      def form(&block)
+      def form(html_options, html_options, &block)
         section(:form, &block)
       end
 
-      def section(name, &block)
+      def section(name, html_options = {}, &block)
+        html_options.merge(class: css_class_for(name))
         capture do
-          content_tag(:div, class: css_class_for(name), &block)
+          content_tag(:div, html_options, &block)
         end
       end
 
