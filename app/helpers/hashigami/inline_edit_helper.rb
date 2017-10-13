@@ -33,7 +33,7 @@ module Hashigami
       end
 
       def form(html_options = {}, &block)
-        section(:form, &block)
+        section(:form, html_options, &block)
       end
 
       def section(name, html_options = {}, &block)
