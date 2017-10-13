@@ -37,7 +37,11 @@ module Hashigami
       end
 
       def section(name, html_options = {}, &block)
-        html_options.merge!(class: css_class_for(name))
+        if html_options.key?(:class)
+          html_options[:class] << " #{css_class_for(name)}"
+        else
+          html_options.merge!(class: css_class_for(name))
+        end
         capture do
           content_tag(:div, html_options, &block)
         end
