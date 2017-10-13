@@ -4,7 +4,7 @@ var setupInlineEdit = function() {
 
     var targetId = this.dataset.inlineEditTarget;
     var target = document.getElementById(targetId);
-    target.classList.toggle('Hashigami-InlineEdit-open');
+    target.classList.toggle('hashigami-InlineEdit-open');
   };
 
   var toggles = document.querySelectorAll('[data-behavior="hashigami-inline-edit"]');
