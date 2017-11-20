@@ -7,6 +7,7 @@ module Hashigami
         root: 'hashigami-InlineEdit'.freeze,
         primary: 'hashigami-InlineEdit_Prime'.freeze,
         form: 'hashigami-InlineEdit_Option'.freeze,
+        open: 'hashigami-InlineEdit-open'.freeze
       }.freeze
 
       def data_behavior_value
@@ -60,10 +61,14 @@ module Hashigami
       end
     end
 
-    def inline_edit_with(container_dom_id, &block)
+    def inline_edit_with(container_dom_id, open: false, &block)
       builder = Builder.new(self, container_dom_id)
       output = capture(builder, &block)
-      content_tag(:div, id: container_dom_id, class: css_class_for(:root)) do
+
+      class_keys = [:root]
+      class_keys += [:open] if open
+      classes = class_keys.map { |k| css_class_for(k) }.join(' ')
+      content_tag(:div, id: container_dom_id, class: classes) do
         concat output
       end
     end
